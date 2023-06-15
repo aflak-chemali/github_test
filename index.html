@@ -1,8 +1,35 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    </head>
+<head>
+  <title>Moving Paragraph</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .moving-paragraph {
+      position: absolute;
+      animation: move 5s infinite;
+      font-size: 24px;
+    }
+    .paused {
+      animation-play-state: paused;
+    }
+
+    @keyframes move {
+      0% { left: 0; top: 0; }
+      25% { left: 50%; top: 0; }
+      50% { left: 50%; top: 50%; }
+      75% { left: 0; top: 50%; }
+      100% { left: 0; top: 0; }
+    }
+  </style>
+</head>
 <body>
-    Website version 111111
+  <div class="container">
+    <div class="moving-paragraph">
+      <p id ="par"></p>
+    </div>
+  </div>
+ 
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src = "bored1api.js"></script>
 </body>
 </html>
